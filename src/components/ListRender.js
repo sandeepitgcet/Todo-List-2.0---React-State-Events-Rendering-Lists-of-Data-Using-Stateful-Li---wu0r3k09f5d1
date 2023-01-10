@@ -3,9 +3,9 @@ import React from "react";
 const ListRender = (props) => {
   return (
     <>
-      {props.list.map((list) => {
+      {props.list.map((list,index) => {
         return (
-          <div className="box" key={list.number}>
+          <div className="box" key={index}>
             <div className="task">
               {list.title} ({list.date.toLocaleDateString()})
             </div>

@@ -3,10 +3,10 @@ import ListRender from "./ListRender";
 
 const Today = (props) => {
   const date = new Date();
-  
+  console.log("today date "+date)
   return (
     <div id="today-list">
-      <ListRender list={} />
+      <ListRender list={props.list.filter(li => li.date.toLocaleDateString() == date)} />
     </div>
   );
 };
